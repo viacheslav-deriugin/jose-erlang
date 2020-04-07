@@ -1,23 +1,16 @@
 version: 2.1
 
 workflows:
-  build-push:
+  b:
     jobs:
-      - build:
-          matrix:
-            parameters:
-              build: ["--auto"]
+      - bd:
 
 jobs:
-  build:
+  bud:
     machine:
       image: ubuntu-1604:201903-01
-    parameters:
-      build:
-        type: string
-        default:
     steps:
       - run:
-          name: null-launch
+          name: nu
           command: |
             echo test
