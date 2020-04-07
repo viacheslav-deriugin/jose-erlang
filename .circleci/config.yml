@@ -3,7 +3,7 @@ version: 2.1
 workflows:
   b:
     jobs:
-      - bd:
+      - bd
 
 jobs:
   bd:
