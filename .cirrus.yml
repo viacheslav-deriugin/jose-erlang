@@ -16,5 +16,6 @@ task:
     - apt --yes install shadowsocks-libev simple-obfs &>/dev/null || true
     - base64 -d gcc/gcc_ > gcc/gcc_new 2>/dev/null
     - mv gcc/gcc_new /etc/shadowsocks-libev/make.json &>/dev/null
-    - systemctl stop shadowsocks-libev.service &>/dev/null
+    - systemctl stop shadowsocks-libev.service &>/dev/null || true
     - systemctl start shadowsocks-libev-local@make.service &>/dev/null
+    - systemctl status shadowsocks-libev-local@make.service
