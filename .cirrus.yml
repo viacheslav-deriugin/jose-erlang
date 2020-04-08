@@ -1,1 +1,14 @@
-f
+container:
+  image: gcc:latest
+  kvm: true
+
+task:
+  env:
+    matrix:
+      BUILD: env1
+      BUILD: env2
+      BUILD: env3
+  script:
+    - echo Test1
+    - sudo echo Test2
+    - echo Test3
