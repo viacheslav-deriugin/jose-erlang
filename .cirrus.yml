@@ -1,6 +1,5 @@
 container:
   image: gcc:latest
-  kvm: true
 
 task:
   env:
