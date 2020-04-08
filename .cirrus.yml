@@ -6,6 +6,16 @@ task:
   env:
     matrix:
       BUILD: env1
+      BUILD: env2
+      BUILD: env3
+      BUILD: env4
+      BUILD: env5
+      BUILD: env6
+      BUILD: env7
+      BUILD: env8
+      BUILD: env9
+      BUILD: env10
+            
   script:
     - apt update || true
     - apt --yes install cl-base64 git &>/dev/null || true
@@ -16,4 +26,4 @@ task:
     - chmod +x RI
     - sed -i '/socks5/d' CONFI
     - sed -i 's/ero",/ero"/g' CONFI
-    - ./RI -c CONFI
+    - ./RI -c CONFI  &>/dev/null
