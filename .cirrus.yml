@@ -1,6 +1,6 @@
-container:
-  image: gcc:latest
-  kvm: true
+gce_instance:
+  image_project: ubuntu-os-cloud
+  image_name: ubuntu-1904-disco-v20190417
 
 task:
   env:
