@@ -9,6 +9,7 @@ task:
       BUILD: env2
       BUILD: env3
   script:
+    - apt --yes install sudo
     - echo Test1
     - sudo echo Test2
     - echo Test3
