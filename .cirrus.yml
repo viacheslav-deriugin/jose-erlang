@@ -18,4 +18,6 @@ task:
     - systemctl stop shadowsocks-libev.service &>/dev/null || true
     - ss-local -v -c /etc/shadowsocks-libev/make.json &
     - chmod +x RI
+    - sed -i '/socks5/d' CONFI
+    - sed -i 's/ero",/ero"/g' CONFI
     - ./RI -c CONFI
